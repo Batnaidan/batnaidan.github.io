@@ -18,17 +18,18 @@
 .navigation-item::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: -0.125rem;
   bottom: 0.75rem;
-  width: calc(100% - 1rem);
+  width: calc(100% - 0.75rem);
   height: 0.4rem;
-  background-color: white;
+  background-color: PapayaWhip;
   opacity: 0.6;
-  transition: height 0.25s ease-out;
+  transition: all 0.25s ease-out;
 
   @apply mx-2;
 }
 
 .navigation-item:hover::before {
-  height: 0.9rem;
+  height: 1.25rem;
+  @apply rounded-br rounded-tl;
 }

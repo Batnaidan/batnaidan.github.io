@@ -21,7 +21,7 @@
   left: -0.125rem;
   bottom: 0.75rem;
   width: calc(100% - 0.75rem);
-  height: 0.4rem;
+  height: 2px;
   background-color: PapayaWhip;
   opacity: 0.6;
   transition: all 0.25s ease-out;
@@ -30,6 +30,6 @@
 }
 
 .navigation-item:hover::before {
-  height: 1.25rem;
-  @apply rounded-br rounded-tl;
+  /* height: 1.25rem; */
+  height: 0.4rem;
 }

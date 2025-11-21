@@ -1,28 +1,29 @@
 import { motion } from "framer-motion";
-
 const experience = [
   {
     company: "Chimege Systems",
     role: "Senior Software Engineer",
     period: "2024.7 - PRESENT",
-    description: "Leading product development and team mentorship.",
+    description:
+      "Led product development and team mentorship, driving the successful launch of four core AI products.",
     details: [
-      "Product Development: Designed and launched four core AI products: Chimege Protocol (meeting protocol system), Chimege Sub (video subtitle tool), Chimege Writer (audio-to-text transcriber), and Chimege Reader (text-to-speech synthesizer).",
-      "Team Leadership: Managed and mentored a 5-member team, providing technical guidance and fostering a collaborative work environment.",
-      "Customer Support: Addressed client technical issues and gathered feedback to drive product improvements, ensuring high satisfaction.",
+      "Spearheaded the design and launch of four core AI products: Chimege Protocol (meeting protocol system), Chimege Sub (video subtitle tool), Chimege Writer (audio-to-text transcriber), and Chimege Reader (text-to-speech synthesizer).",
+      "Managed and mentored a 5-member engineering team, providing technical guidance, fostering collaboration, and enhancing team productivity.",
+      "Resolved client technical issues and leveraged feedback to implement product improvements, significantly boosting customer satisfaction.",
     ],
-    stack: ["Golang", "Vue.js", "Nuxt", "AI/ML Products"],
+    stack: ["Golang", "Vue.js", "Nuxt", "AI/ML Products", "Apache Kafka"],
   },
   {
     company: "Chimege Systems",
     role: "Software Engineer",
     period: "2023.08 - 2024.7",
-    description: "Developed data preparation tools and AI meeting systems.",
+    description:
+      "Developed robust data preparation tools and integral components for AI meeting systems, enhancing data pipeline efficiency.",
     details: [
-      "Built and maintained multiple data preprocessing tools to automate data cleaning, validation, and transformation tasks.",
-      "Designed database structure for scalable applications.",
-      "Created machine learning model pipeline with pub/sub architecture using Apache Kafka.",
-      "Implemented NAS (Network Attached Storage) for backing up files.",
+      "Built and maintained multiple data preprocessing tools, automating data cleaning, validation, and transformation tasks to improve data quality and efficiency.",
+      "Designed scalable database structures to support high-volume applications and ensure data integrity.",
+      "Engineered a machine learning model pipeline utilizing Apache Kafka for pub/sub architecture, enabling real-time data processing.",
+      "Implemented Network Attached Storage (NAS) solutions for secure and efficient file backup and retrieval.",
     ],
     stack: ["Golang", "Apache Kafka", "Database Design", "NAS"],
   },
@@ -31,9 +32,9 @@ const experience = [
     role: "Back-end developer",
     period: "2022.06 - 2023.08",
     description:
-      "Developed highly available, decoupled, scalable web applications based on containerized microservices structure.",
+      "Contributed to the development of highly available, decoupled, and scalable web applications within a containerized microservices architecture.",
     details: [
-      "Developed a system that meets standard of business requirements.",
+      "Developed and delivered systems that consistently met stringent business requirements and performance standards.",
     ],
     stack: ["Microservices", "Containerization", "Backend"],
   },
@@ -42,10 +43,10 @@ const experience = [
     role: "Back-end developer",
     period: "2021.10 - 2022.06",
     description:
-      "Developed and maintained medical and business management systems.",
+      "Developed and maintained critical medical and business management systems, ensuring high performance and data integrity.",
     details: [
-      "Developed and maintained a medical system that implemented FHIR open source medical data standard.",
-      "Designed database architecture of business management systems.",
+      "Developed and maintained a medical system adhering to the FHIR open-source medical data standard, improving interoperability and data exchange.",
+      "Designed efficient database architectures for business management systems, optimizing data storage and retrieval.",
     ],
     stack: ["FHIR", "Database Architecture", "Backend"],
   },

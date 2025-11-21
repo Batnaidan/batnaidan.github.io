@@ -38,7 +38,7 @@ export default function Signature() {
         viewBox="0 0 612 230"
         className="stroke-primary w-full stroke-[2] text-transparent"
       >
-        {signaturePaths.reverse().map((path, index) => (
+        {signaturePaths.map((path, index) => (
           <motion.path
             key={index}
             d={path}

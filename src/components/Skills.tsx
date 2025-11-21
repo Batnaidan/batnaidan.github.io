@@ -15,7 +15,7 @@ const skills = [
   },
   {
     category: "Languages",
-    items: ["English (IELTS Band 7)", "Japanese (JLPT N4)"],
+    items: ["English (IELTS Band 7)"],
   },
 ];
 

@@ -1,4 +1,5 @@
 import { type AppType } from "next/app";
+import "@fontsource/outfit";
 
 import { api } from "~/utils/api";
 

@@ -1,35 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Inspiration&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inspiration&family=Nunito:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.caligraphy-text {
-  font-family: "Inspiration", cursive;
+:root {
+  --background: 224 71% 4%;
+  --foreground: 213 31% 91%;
+
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
 }
 
-.navigation-item {
-  display: inline-block;
-  position: relative;
-  @apply cursor-pointer p-2 font-serif font-semibold italic;
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
 }
 
-.navigation-item::before {
-  content: "";
-  position: absolute;
-  left: -0.125rem;
-  bottom: 0.75rem;
-  width: calc(100% - 0.75rem);
-  height: 2px;
-  background-color: PapayaWhip;
-  opacity: 0.6;
-  transition: all 0.25s ease-out;
-
-  @apply mx-2;
-}
-
-.navigation-item:hover::before {
-  /* height: 1.25rem; */
-  height: 0.4rem;
+.glass-panel {
+  @apply border border-white/10 bg-white/5 backdrop-blur-lg;
 }

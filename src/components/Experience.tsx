@@ -54,57 +54,69 @@ const experience = [
 
 export default function Experience() {
   return (
-    <section className="container mx-auto px-4 py-16 md:py-24">
+    <section id="experience" className="container mx-auto px-4 py-16 md:py-24">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="mb-12 text-center"
+        className="mb-16 text-center"
       >
-        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+        <h2 className="bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl">
           Experience
         </h2>
-        <p className="text-muted-foreground mt-4 text-lg">
+        <p className="text-muted-foreground mt-4 text-lg sm:text-xl">
           My professional journey and technical expertise.
         </p>
       </motion.div>
 
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto max-w-4xl">
         {experience.map((job, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: index * 0.2, duration: 0.5 }}
-            className="border-muted relative border-l pb-12 pl-8 last:pb-0"
+            transition={{ delay: index * 0.15, duration: 0.5 }}
+            className="group relative mb-8 overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-white/20 hover:bg-white/10 sm:p-8"
           >
-            <div className="bg-primary absolute -left-[5px] top-0 h-2.5 w-2.5 rounded-full" />
-            <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-              <h3 className="text-xl font-semibold">{job.role}</h3>
-              <span className="text-muted-foreground text-sm">
-                {job.period}
-              </span>
-            </div>
-            <div className="text-primary text-lg font-medium">
-              {job.company}
-            </div>
-            <p className="text-muted-foreground mt-2">{job.description}</p>
-            <ul className="text-muted-foreground mt-4 list-disc space-y-2 pl-4">
-              {job.details.map((detail, i) => (
-                <li key={i}>{detail}</li>
-              ))}
-            </ul>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {job.stack.map((tech) => (
-                <span
-                  key={tech}
-                  className="text-secondary-foreground rounded-full bg-white/10 px-3 py-1 text-xs font-medium"
-                >
-                  {tech}
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            
+            <div className="relative">
+              <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold sm:text-2xl">{job.role}</h3>
+                  <div className="text-primary mt-1 text-lg font-medium sm:text-xl">
+                    {job.company}
+                  </div>
+                </div>
+                <span className="text-muted-foreground shrink-0 text-sm font-medium sm:text-base">
+                  {job.period}
                 </span>
-              ))}
+              </div>
+              
+              <p className="text-muted-foreground mb-4 text-base leading-relaxed sm:text-lg">
+                {job.description}
+              </p>
+              
+              <ul className="text-muted-foreground mb-6 space-y-2.5 pl-5">
+                {job.details.map((detail, i) => (
+                  <li key={i} className="relative text-sm leading-relaxed before:absolute before:-left-4 before:top-2 before:h-1.5 before:w-1.5 before:rounded-full before:bg-primary/60 sm:text-base">
+                    {detail}
+                  </li>
+                ))}
+              </ul>
+              
+              <div className="flex flex-wrap gap-2">
+                {job.stack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-foreground/90 backdrop-blur-sm transition-all duration-200 hover:border-primary/30 hover:bg-primary/10 hover:text-primary sm:text-sm"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           </motion.div>
         ))}

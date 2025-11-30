@@ -29,48 +29,58 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="container mx-auto px-4 py-16 md:py-24">
+    <section id="projects" className="container mx-auto px-4 py-16 md:py-24">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="mb-12 text-center"
+        className="mb-16 text-center"
       >
-        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+        <h2 className="bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl">
           Projects & Expertise
         </h2>
-        <p className="text-muted-foreground mt-4 text-lg">
+        <p className="text-muted-foreground mt-4 text-lg sm:text-xl">
           Showcasing my work in speech technology and software engineering.
         </p>
       </motion.div>
 
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1, duration: 0.5 }}
-            className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 transition-colors hover:bg-white/10"
+            className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:border-white/20 hover:bg-white/10 hover:shadow-lg hover:shadow-primary/5 sm:p-8"
           >
-            <div className="mb-4">
-              <h3 className="group-hover:text-primary text-xl font-semibold transition-colors">
-                {project.title}
-              </h3>
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            
+            <div className="relative">
+              <div className="mb-4">
+                <h3 className="text-xl font-semibold transition-colors group-hover:text-primary sm:text-2xl">
+                  {project.title}
+                </h3>
+              </div>
+              
+              <p className="text-muted-foreground mb-6 text-sm leading-relaxed sm:text-base">
+                {project.description}
+              </p>
+              
+              <div className="flex flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-lg border border-primary/20 bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary backdrop-blur-sm transition-all duration-200 group-hover:border-primary/40 group-hover:bg-primary/20 sm:text-sm"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
-            <p className="text-muted-foreground mb-6">{project.description}</p>
-            <div className="flex flex-wrap gap-2">
-              {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="bg-primary/10 text-primary rounded-md px-2 py-1 text-xs font-medium"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
+            
+            <div className="absolute -bottom-1 -right-1 h-24 w-24 rounded-full bg-primary/5 blur-2xl transition-all duration-500 group-hover:scale-150 group-hover:bg-primary/10" />
           </motion.div>
         ))}
       </div>

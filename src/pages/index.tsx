@@ -8,9 +8,11 @@ import Skills from "~/components/Skills";
 import Education from "~/components/Education";
 
 const Home: NextPage = () => {
+  console.log("aren't u cute lil dev");
+
   return (
     <Layout>
-      <div className="flex flex-col gap-16 md:gap-32">
+      <div className="flex flex-col gap-20 md:gap-32 lg:gap-40">
         <Hero />
         <Experience />
         <Projects />

@@ -36,7 +36,7 @@ export default function Signature() {
     >
       <svg
         viewBox="0 0 612 230"
-        className="stroke-primary w-full stroke-[2] text-transparent"
+        className="w-full stroke-primary stroke-[2] text-transparent"
       >
         {signaturePaths.map((path, index) => (
           <motion.path
@@ -45,7 +45,7 @@ export default function Signature() {
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
             transition={{
-              duration: 1.5,
+              duration: 1,
               ease: "easeInOut",
               delay: 0.5 + index * 0.1,
             }}

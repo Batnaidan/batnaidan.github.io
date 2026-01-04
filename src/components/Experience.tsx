@@ -34,9 +34,11 @@ const experience = [
     description:
       "Contributed to the development of highly available, decoupled, and scalable web applications within a containerized microservices architecture.",
     details: [
-      "Developed and delivered systems that consistently met stringent business requirements and performance standards.",
+      "Ensured quality and reliability by developing services based on specific business requirements, managing testing environment deployment, monitoring performance, and performing thorough code reviews.",
+      "Designed architecture of Trust/Deposit (Savings) calculation and accounting system.",
+      'Designed and implemented the back-end services for "PayOn," a Buy Now, Pay Later (BNPL) platform enabling 0% interest product purchases.',
     ],
-    stack: ["Microservices", "Containerization", "Backend"],
+    stack: ["Microservices", "Containerization", "Node.js", "Backend"],
   },
   {
     company: "Mono Solution",
@@ -65,7 +67,7 @@ export default function Experience() {
         <h2 className="bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl">
           Experience
         </h2>
-        <p className="text-muted-foreground mt-4 text-lg sm:text-xl">
+        <p className="mt-4 text-lg text-muted-foreground sm:text-xl">
           My professional journey and technical expertise.
         </p>
       </motion.div>
@@ -81,32 +83,37 @@ export default function Experience() {
             className="group relative mb-8 overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:border-white/20 hover:bg-white/10 sm:p-8"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-            
+
             <div className="relative">
               <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold sm:text-2xl">{job.role}</h3>
-                  <div className="text-primary mt-1 text-lg font-medium sm:text-xl">
+                  <h3 className="text-xl font-semibold sm:text-2xl">
+                    {job.role}
+                  </h3>
+                  <div className="mt-1 text-lg font-medium text-primary sm:text-xl">
                     {job.company}
                   </div>
                 </div>
-                <span className="text-muted-foreground shrink-0 text-sm font-medium sm:text-base">
+                <span className="shrink-0 text-sm font-medium text-muted-foreground sm:text-base">
                   {job.period}
                 </span>
               </div>
-              
-              <p className="text-muted-foreground mb-4 text-base leading-relaxed sm:text-lg">
+
+              <p className="mb-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
                 {job.description}
               </p>
-              
-              <ul className="text-muted-foreground mb-6 space-y-2.5 pl-5">
+
+              <ul className="mb-6 space-y-2.5 pl-5 text-muted-foreground">
                 {job.details.map((detail, i) => (
-                  <li key={i} className="relative text-sm leading-relaxed before:absolute before:-left-4 before:top-2 before:h-1.5 before:w-1.5 before:rounded-full before:bg-primary/60 sm:text-base">
+                  <li
+                    key={i}
+                    className="relative text-sm leading-relaxed before:absolute before:-left-4 before:top-2 before:h-1.5 before:w-1.5 before:rounded-full before:bg-primary/60 sm:text-base"
+                  >
                     {detail}
                   </li>
                 ))}
               </ul>
-              
+
               <div className="flex flex-wrap gap-2">
                 {job.stack.map((tech) => (
                   <span

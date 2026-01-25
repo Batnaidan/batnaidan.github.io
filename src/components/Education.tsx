@@ -11,25 +11,22 @@ export default function Education() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text mb-8 text-3xl font-bold tracking-tight text-transparent sm:text-4xl md:text-5xl">
+          <h2 className="mb-8 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-3xl font-bold tracking-tight text-transparent sm:text-4xl md:text-5xl">
             Education
           </h2>
           <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:border-white/20 hover:bg-white/10 sm:p-8">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-            
+
             <div className="relative">
               <div className="mb-4 flex flex-col gap-2">
                 <h3 className="text-xl font-semibold sm:text-2xl">
                   National University of Mongolia
                 </h3>
-                <span className="text-muted-foreground text-sm font-medium sm:text-base">
-                  2018.09 - 2022.06
-                </span>
               </div>
-              <div className="text-primary mb-3 text-lg font-semibold sm:text-xl">
+              <div className="mb-3 text-lg font-semibold text-primary sm:text-xl">
                 Bachelor
               </div>
-              <p className="text-muted-foreground text-sm leading-relaxed sm:text-base">
+              <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
                 Majored in Computer Science.
               </p>
             </div>
@@ -43,25 +40,25 @@ export default function Education() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <h2 className="bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text mb-8 text-3xl font-bold tracking-tight text-transparent sm:text-4xl md:text-5xl">
+          <h2 className="mb-8 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-3xl font-bold tracking-tight text-transparent sm:text-4xl md:text-5xl">
             Awards
           </h2>
           <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:border-white/20 hover:bg-white/10 sm:p-8">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-            
+
             <div className="relative">
               <div className="mb-4 flex flex-col gap-2">
                 <h3 className="text-xl font-semibold sm:text-2xl">
                   Haruul Zangi U18 Competition
                 </h3>
-                <span className="text-muted-foreground text-sm font-medium sm:text-base">
+                <span className="text-sm font-medium text-muted-foreground sm:text-base">
                   2017 - 2018
                 </span>
               </div>
-              <div className="text-primary mb-3 text-lg font-semibold sm:text-xl">
+              <div className="mb-3 text-lg font-semibold text-primary sm:text-xl">
                 Cyber Security
               </div>
-              <p className="text-muted-foreground text-sm leading-relaxed sm:text-base">
+              <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
                 Was placed 7th place in 2 consecutive years.
               </p>
             </div>

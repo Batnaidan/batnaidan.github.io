@@ -9,9 +9,11 @@ const experience = [
     details: [
       "Spearheaded the design and launch of four core AI products: Chimege Protocol (meeting protocol system), Chimege Sub (video subtitle tool), Chimege Writer (audio-to-text transcriber), and Chimege Reader (text-to-speech synthesizer).",
       "Managed and mentored a 5-member engineering team, providing technical guidance, fostering collaboration, and enhancing team productivity.",
+      "Built internal monitoring infrastructure with Grafana for real-time metrics and centralized log aggregation, improving system observability across services.",
+      "Identified and resolved a critical production memory leak caused by a session management package retaining every request body in memory, using Go pprof profiling to diagnose and fix the issue.",
       "Resolved client technical issues and leveraged feedback to implement product improvements, significantly boosting customer satisfaction.",
     ],
-    stack: ["Golang", "Vue.js", "Nuxt", "AI/ML Products", "Apache Kafka"],
+    stack: ["Golang", "Vue.js", "Nuxt", "AI/ML Products", "Apache Kafka", "Grafana"],
   },
   {
     company: "Chimege Systems",

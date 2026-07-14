@@ -3,7 +3,7 @@ const experience = [
   {
     company: "Chimege Systems",
     role: "Senior Software Engineer",
-    period: "2024.7 - PRESENT",
+    period: "2024.7 - 2026.6",
     description:
       "Led product development and team mentorship, driving the successful launch of four core AI products.",
     details: [

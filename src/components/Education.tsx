@@ -27,7 +27,7 @@ export default function Education() {
                 Bachelor
               </div>
               <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
-                Majored in Computer Science.
+                Majored in Science.
               </p>
             </div>
           </div>
